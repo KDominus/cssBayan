@@ -1,10 +1,121 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.bayan{
+#vp1:checked ~ .catch-area [for='vp1'] .catch-area__custom-mark {
+  /* border: 0.4em solid #fff; */
+  /* outline: 0.2em solid greenyellow; */
+  /* outline-offset: -0.2em; */
+  background-color: greenyellow;
+}
+
+#vp1:checked ~ .spoiler__viewport > * {
+  transform: rotateX(10%);
+  /* height: 0px; */
+  /* display: none; */
+  background-color: greenyellow;
+
+  transition: all 0.3s;
+}
+
+#vp2:checked ~ .catch-area [for='vp2'] .catch-area__custom-mark {
+  /* border: 0.4em solid #fff; */
+  /* outline: 0.2em solid greenyellow; */
+  /* outline-offset: -0.2em; */
+  background-color: greenyellow;
+}
+
+#vp2:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+
+#vp3:checked ~ .catch-area [for='vp3'] .catch-area__custom-mark {
+  /* border: 0.4em solid #fff; */
+  /* outline: 0.2em solid greenyellow; */
+  /* outline-offset: -0.2em; */
+  background-color: greenyellow;
+}
+
+#vp3:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  transform: translateX(-200%);
+  transition: 0.3s;
+}
+
+#vp4:checked ~ .catch-area [for='vp4'] .catch-area__custom-mark {
+  /* border: 0.4em solid #fff; */
+  /* outline: 0.2em solid greenyellow; */
+  /* outline-offset: -0.2em; */
+  background-color: greenyellow;
+}
+
+#vp4:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  transform: translateX(-300%);
+  transition: 0.3s;
+}
+#vp5:checked ~ .catch-area [for='vp5'] .catch-area__custom-mark {
+  /* border: 0.4em solid #fff; */
+  /* outline: 0.2em solid greenyellow; */
+  /* outline-offset: -0.2em; */
+  background-color: greenyellow;
+}
+
+#vp5:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  transform: translateX(-300%);
+  transition: 0.3s;
+}
+
+.bayan {
+  width: 75%;
   margin: 0 auto;
   outline: 2px dashed darkblue;
+}
+
+.spoiler-selector-wrap {
+  display: flex;
+  flex-direction: column;
+  /* background-color: gold; */
+}
+
+.spoiler-viewport {
+  background-color: #abc;
+}
+
+.catch-area {
+  z-index: 999;
+}
+
+.catch-area__label {
+  border: 2px solid rebeccapurple;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.catch-area__heading {
+  display: flex;
+  flex-direction: row;
+  /* background-color: #abc; */
+}
+
+.catch-area__descriptor {
+  color: brown;
+}
+
+.catch-area__custom-mark {
+  display: block;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #abc;
+}
+
+.spoiler__scrool-holder {
+  display: flex;
+  background-color: goldenrod;
+}
+
+.hidden {
+  display: none;
 }
