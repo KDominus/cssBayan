@@ -8,59 +8,115 @@
   transform: rotate(45deg);
   background-color: red;
   text-align: center;
+  transition: all 3s;
 }
 
 #vp1:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
   background-color: greenyellow;
   display: flex;
-  transition: all 0.3s;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
+}
+
+#vp1:hover ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  background-color: greenyellow;
+  display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
 }
 
 #vp2:checked ~ .catch-area__heading .catch-area__cmark {
   transform: rotate(45deg);
   background-color: red;
   text-align: center;
+  transition: all 3s;
 }
 
 #vp2:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
   background-color: greenyellow;
   display: flex;
-  transition: all 0.3s;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
+}
+
+#vp2:hover ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  background-color: greenyellow;
+  display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
 }
 
 #vp3:checked ~ .catch-area__heading .catch-area__cmark {
   transform: rotate(45deg);
   background-color: red;
   text-align: center;
+  transition: all 3s;
 }
 
 #vp3:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
   background-color: greenyellow;
-  transition: all 0.3s;
   display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
+}
+
+#vp3:hover ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  background-color: greenyellow;
+  display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
 }
 
 #vp4:checked ~ .catch-area__heading .catch-area__cmark {
   transform: rotate(45deg);
   background-color: red;
   text-align: center;
+  transition: all 3s;
 }
 
 #vp4:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
   background-color: greenyellow;
-  transition: all 0.3s;
   display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
 }
+
+#vp4:hover ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  background-color: greenyellow;
+  display: flex;
+  opacity: 1;
+  height: 7rem;
+  transition: all 3s;
+}
+
 #vp5:checked ~ .catch-area__heading .catch-area__cmark {
   transform: rotate(45deg);
   background-color: red;
   text-align: center;
+  transition: all 3s;
 }
 
 #vp5:checked ~ .spoiler__viewport .spoiler__scrool-holder > * {
   background-color: greenyellow;
-  transition: all 0.3s;
   display: flex;
+  opacity: 1;
+  transition: all 3s;
+  height: 7rem;
+}
+
+#vp5:hover ~ .spoiler__viewport .spoiler__scrool-holder > * {
+  background-color: greenyellow;
+  display: flex;
+  opacity: 1;
+  height: 7rem;
+  transition: all 3s;
 }
 
 .bayan {
@@ -76,6 +132,9 @@
 
 .spoiler-viewport {
   background-color: #abc;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .catch-area {
@@ -83,7 +142,7 @@
 }
 
 .catch-area__label {
-  border: 2px solid rebeccapurple;
+  border: 0.1rem solid gray;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -95,7 +154,7 @@
 }
 
 .catch-area__descriptor {
-  color: brown;
+  text-decoration: underline;
 }
 
 .catch-area__cmark {
@@ -105,15 +164,67 @@
   background-color: #abc;
 }
 
+.spoiler__scrool-holder {
+  display: flex;
+  justify-items: center;
+}
+
 .spoiler__scrool-holder > img {
-  /* display: none; */
-  display: none;
+  height: 0;
+  opacity: 0;
+  margin: 0 auto;
 }
 
 .spoiler__image {
-  /* display: none; */
+  border: none;
+}
+
+input {
+  display: none;
 }
 
 .hidden {
   display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+label:active {
+  background-color: greenyellow;
+}
+
+input:checked ~ * {
+  background-color: greenyellow;
+}
+
+@media screen and (min-width: 320px) {
+  * {
+    font-size: 1rem;
+    color: red;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  * {
+    font-size: 1.3rem;
+    color: purple;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  * {
+    font-size: 1.5rem;
+    color: darkblue;
+    font-weight: bold;
+  }
+}
+
+@media (hover: hover) {
+  label:hover {
+    background-color: gold;
+    transition: all 1s;
+  }
 }
